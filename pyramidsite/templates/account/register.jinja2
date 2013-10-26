@@ -1,0 +1,27 @@
+{% extends "templates/base.html" %}
+{% import 'templates/baseform.jinja2' as f %}
+{% block title %}Registrate Gratis en nuestro sitio.{% endblock %}
+{% block content %}
+<div class="row-fluid">
+    <div class="span9">
+        {% if form %}
+        <form id="" class="well" action="" method="post" accept-charset="utf-8">
+            <fieldset>
+                <legend><h2>Registro de Nuevo Usuario</h2></legend>
+                {{ f.text_field(form.user_name, 20) }}
+                {{ f.text_field(form.email, 60) }}
+                {{ f.field(form.password) }}
+                {{ f.field(form.retype_password) }}
+
+                <hr/>
+                <button type="submit" class="btn">Enviar</button>
+            </fieldset>
+        </form>
+        {% endif %}
+    </div>
+    <div class="span3">
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import 'baseform.jinja2' as f %}
+{% block content %}
+<div class="row-fluid">
+    <div class="span9">
+        {% if form %}
+        <form id="" class="well" action="" method="post" accept-charset="utf-8">
+            <fieldset>
+                <legend><h2>Login</h2></legend>
+                {{ f.text_field(form.email, 40) }}
+                {{ f.field(form.password) }}
+                {{ form.came_from() }}
+                <p>Forgot your password? <a href="/recover-password">Recover Password</a></p>
+                <hr/>
+                <button type="submit" class="btn">Submit</button>
+            </fieldset>
+        </form>
+        {% endif %}
+    </div>
+    <div class="span3">
+
+    </div>
+</div>
+
+{% endblock %}

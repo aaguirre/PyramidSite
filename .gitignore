@@ -1,0 +1,18 @@
+PyramidSite.egg-info/
+*.egg
+*egg-info
+
+# Compiled
+*.pyc
+*.pyo
+
+# Temp vim files
+*.swp
+
+.DS_Store/
+.DS_Store
+
+data/
+
+pyramidsite.sublime-project
+pyramidsite.sublime-workspace
